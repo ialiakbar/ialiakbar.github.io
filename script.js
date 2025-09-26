@@ -1,11 +1,15 @@
 // Configuration loader
 let config = {};
+let isConfigLoaded = false;
 
 // Load configuration from config.json
 async function loadConfig() {
+    if (isConfigLoaded) return; // Prevent duplicate loading
+    
     try {
         const response = await fetch('config.json');
         config = await response.json();
+        isConfigLoaded = true;
         populateWebsite();
     } catch (error) {
         console.error('Error loading config:', error);
@@ -156,10 +160,9 @@ function populateWebsite() {
 function updateElement(selector, content) {
     const element = document.querySelector(selector);
     if (element) {
-        console.log(`Updating ${selector} with:`, content);
+        // Clear the element completely first
+        element.textContent = '';
         element.innerHTML = content;
-    } else {
-        console.warn(`Element not found: ${selector}`);
     }
 }
 
@@ -209,10 +212,10 @@ document.addEventListener('click', (e) => {
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
         navbar.style.boxShadow = 'none';
     }
 });
