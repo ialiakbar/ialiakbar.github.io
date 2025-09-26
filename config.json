@@ -2,15 +2,15 @@
   "personal": {
     "name": "Aliakbar Golestani",
     "title": "Software Engineer",
-    "description": "Passionate about creating innovative solutions and building amazing user experiences.",
+    "description": "Passionate about solving non-trivial challenges, software engineering, and Big Data.",
     "email": "aliakbar.gls@aut.ac.ir",
     "phone": "+98 (901) 9564",
-    "location": "Tehran, Country",
+    "location": "Tehran, Iran",
     "profileImage": "images/profile.png"
   },
   "about": {
-    "description1": "I'm a passionate software engineer with a love for creating innovative solutions and building amazing user experiences. With expertise in modern web technologies, I enjoy turning complex problems into simple, beautiful, and intuitive solutions.",
-    "description2": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
+    "description1": "I am a Software Engineer with over 4 years of experience in the advertising domain, focusing on related algorithms and new product development. I enjoy tackling non-trivial challenges and solving them using software engineering and data-driven approaches.",
+    "description2": ":)",
     "stats": [
       {
         "number": "60+",
@@ -24,32 +24,25 @@
   },
   "experience": [
     {
-      "period": "2023 - Present",
-      "title": "Senior Software Engineer",
-      "company": "Tech Solutions Inc.",
-      "description": "Leading development of scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-      "technologies": ["React", "Node.js", "TypeScript", "AWS", "Docker"]
+      "period": "Jan 2022 - Present",
+      "title": "Software Engineer",
+      "company": "Yektanet, Tehran, Iran",
+      "description": "Ad Network In Iran.",
+      "technologies": ["Python", "Go", "JS", "Django", "Node.js", "TypeScript", "Redis", "PostgreSQL", "NoSQL", "Airflow", "Spark", "Kafka", "RabbitMQ", "SRE", "CI-CD", "Docker", "Kubernetes", "Object Storage"]
     },
     {
-      "period": "2021 - 2023",
-      "title": "Full Stack Developer",
-      "company": "Digital Innovations Ltd.",
-      "description": "Developed and maintained web applications from concept to deployment. Implemented responsive designs and optimized application performance.",
-      "technologies": ["Vue.js", "Python", "PostgreSQL", "Redis", "Git"]
-    },
-    {
-      "period": "2020 - 2021",
-      "title": "Frontend Developer",
-      "company": "WebCraft Studio",
-      "description": "Created interactive user interfaces and improved user experience across multiple web applications. Collaborated with designers to implement pixel-perfect designs.",
-      "technologies": ["JavaScript", "HTML5", "CSS3", "Sass", "Webpack"]
+      "period": "Aug 2025 - Present",
+      "title": "Software Engineer",
+      "company": "Tradique, Dubai, UAE",
+      "description": "AI-Driven AdTech Platform.",
+      "technologies": ["Python", "Go", "JS", "Django", "Node.js", "TypeScript", "Redis", "PostgreSQL", "NoSQL", "Airflow", "Spark", "Kafka", "RabbitMQ", "SRE", "CI-CD", "Docker", "Kubernetes", "Object Storage"]
     }
   ],
   "projects": [
     {
-      "title": "E-Commerce Platform",
-      "description": "A full-stack e-commerce solution with React frontend and Node.js backend, featuring user authentication, payment integration, and admin dashboard.",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "title": "Android E-Commerce Platform",
+      "description": "An Android e-commerce application built with Java for AP course project.",
+      "technologies": ["Java", "Database", "OAuth", "Gradle", "Android Studio"],
       "icon": "fas fa-shopping-cart",
       "liveDemo": "#",
       "github": "#"

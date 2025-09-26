@@ -45,7 +45,7 @@ function populateWebsite() {
                 // Check if it's an image file or Font Awesome icon
                 if (config.personal.profileImage.startsWith('images/') || config.personal.profileImage.startsWith('http')) {
                     // It's an image file
-                    profileImage.innerHTML = `<img src="${config.personal.profileImage}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
+                    profileImage.innerHTML = `<img src="${config.personal.profileImage}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">`;
                 } else {
                     // It's a Font Awesome icon
                     profileImage.innerHTML = `<i class="${config.personal.profileImage}"></i>`;
