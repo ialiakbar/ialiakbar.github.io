@@ -1,3 +1,182 @@
+// Configuration loader
+let config = {};
+
+// Load configuration from config.json
+async function loadConfig() {
+    try {
+        const response = await fetch('config.json');
+        config = await response.json();
+        populateWebsite();
+    } catch (error) {
+        console.error('Error loading config:', error);
+        // Fallback to default content if config fails to load
+        populateWebsite();
+    }
+}
+
+// Populate website with config data
+function populateWebsite() {
+    // Update personal information
+    if (config.personal) {
+        updateElement('.hero-title', `Hi, I'm <span class="highlight">${config.personal.name}</span>`);
+        updateElement('.hero-subtitle', config.personal.title);
+        updateElement('.hero-description', config.personal.description);
+        updateElement('.nav-logo a', config.personal.name);
+        
+        // Update contact information
+        if (config.personal.email) {
+            updateContactItem('fas fa-envelope', config.personal.email);
+        }
+        if (config.personal.phone) {
+            updateContactItem('fas fa-phone', config.personal.phone);
+        }
+        if (config.personal.location) {
+            updateContactItem('fas fa-map-marker-alt', config.personal.location);
+        }
+        
+        // Update profile image
+        if (config.personal.profileImage) {
+            const profileIcon = document.querySelector('.profile-image i');
+            if (profileIcon) {
+                profileIcon.className = config.personal.profileImage;
+            }
+        }
+    }
+    
+    // Update about section
+    if (config.about) {
+        updateElement('.about-text p:first-of-type', config.about.description1);
+        updateElement('.about-text p:nth-of-type(2)', config.about.description2);
+        
+        // Update stats
+        if (config.about.stats) {
+            const statsContainer = document.querySelector('.about-stats');
+            if (statsContainer) {
+                statsContainer.innerHTML = '';
+                config.about.stats.forEach(stat => {
+                    const statElement = document.createElement('div');
+                    statElement.className = 'stat';
+                    statElement.innerHTML = `
+                        <h3>${stat.number}</h3>
+                        <p>${stat.label}</p>
+                    `;
+                    statsContainer.appendChild(statElement);
+                });
+            }
+        }
+    }
+    
+    // Update skills section
+    if (config.skills) {
+        const skillsContainer = document.querySelector('.skills-grid');
+        if (skillsContainer) {
+            skillsContainer.innerHTML = '';
+            config.skills.forEach(skillCategory => {
+                const categoryElement = document.createElement('div');
+                categoryElement.className = 'skill-category';
+                
+                const itemsHTML = skillCategory.items.map(item => `
+                    <div class="skill-item">
+                        <i class="${item.icon}"></i>
+                        <span>${item.name}</span>
+                    </div>
+                `).join('');
+                
+                categoryElement.innerHTML = `
+                    <h3>${skillCategory.category}</h3>
+                    <div class="skill-items">
+                        ${itemsHTML}
+                    </div>
+                `;
+                skillsContainer.appendChild(categoryElement);
+            });
+        }
+    }
+    
+    // Update projects section
+    if (config.projects) {
+        const projectsContainer = document.querySelector('.projects-grid');
+        if (projectsContainer) {
+            projectsContainer.innerHTML = '';
+            config.projects.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.className = 'project-card';
+                
+                const techHTML = project.technologies.map(tech => `<span>${tech}</span>`).join('');
+                
+                projectElement.innerHTML = `
+                    <div class="project-image">
+                        <i class="${project.icon}"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <div class="project-tech">
+                            ${techHTML}
+                        </div>
+                        <div class="project-links">
+                            <a href="${project.liveDemo}" class="btn btn-outline">Live Demo</a>
+                            <a href="${project.github}" class="btn btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                `;
+                projectsContainer.appendChild(projectElement);
+            });
+        }
+    }
+    
+    // Update social links
+    if (config.social) {
+        const socialContainer = document.querySelector('.social-links');
+        if (socialContainer) {
+            socialContainer.innerHTML = '';
+            config.social.forEach(social => {
+                const socialElement = document.createElement('a');
+                socialElement.className = 'social-link';
+                socialElement.href = social.url;
+                socialElement.innerHTML = `<i class="${social.icon}"></i>`;
+                socialContainer.appendChild(socialElement);
+            });
+        }
+    }
+    
+    // Update contact section
+    if (config.contact) {
+        updateElement('.contact-info h3', config.contact.title);
+        updateElement('.contact-info p', config.contact.description);
+    }
+    
+    // Update footer
+    if (config.footer) {
+        updateElement('.footer p', `&copy; ${config.footer.copyright}`);
+    }
+}
+
+// Helper function to update element content
+function updateElement(selector, content) {
+    const element = document.querySelector(selector);
+    if (element) {
+        console.log(`Updating ${selector} with:`, content);
+        element.innerHTML = content;
+    } else {
+        console.warn(`Element not found: ${selector}`);
+    }
+}
+
+// Helper function to update contact items
+function updateContactItem(iconClass, text) {
+    const contactItems = document.querySelectorAll('.contact-item');
+    contactItems.forEach(item => {
+        const icon = item.querySelector('i');
+        if (icon && icon.className.includes(iconClass.split(' ')[1])) {
+            const span = item.querySelector('span');
+            if (span) {
+                span.textContent = text;
+            }
+        }
+    });
+}
+
 // DOM Elements
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
@@ -326,6 +505,9 @@ window.addEventListener('scroll', addActiveClass);
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Load configuration first
+    loadConfig();
+    
     // Add smooth scrolling to all anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {

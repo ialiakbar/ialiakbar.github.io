@@ -1,0 +1,99 @@
+{
+  "personal": {
+    "name": "Aliakbar",
+    "title": "Software Engineer",
+    "description": "Passionate about creating innovative solutions and building amazing user experiences.",
+    "email": "aliakbar@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "Your City, Country",
+    "profileImage": "fas fa-user"
+  },
+  "about": {
+    "description1": "I'm a passionate software engineer with a love for creating innovative solutions and building amazing user experiences. With expertise in modern web technologies, I enjoy turning complex problems into simple, beautiful, and intuitive solutions.",
+    "description2": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
+    "stats": [
+      {
+        "number": "50+",
+        "label": "Projects Completed"
+      },
+      {
+        "number": "2+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "100%",
+        "label": "Client Satisfaction"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Frontend Development",
+      "items": [
+        { "name": "HTML5", "icon": "fab fa-html5" },
+        { "name": "CSS3", "icon": "fab fa-css3-alt" },
+        { "name": "JavaScript", "icon": "fab fa-js-square" },
+        { "name": "React", "icon": "fab fa-react" },
+        { "name": "Vue.js", "icon": "fab fa-vue" }
+      ]
+    },
+    {
+      "category": "Backend Development",
+      "items": [
+        { "name": "Node.js", "icon": "fab fa-node-js" },
+        { "name": "Python", "icon": "fab fa-python" },
+        { "name": "MongoDB", "icon": "fas fa-database" },
+        { "name": "Express.js", "icon": "fas fa-server" }
+      ]
+    },
+    {
+      "category": "Tools & Others",
+      "items": [
+        { "name": "Git", "icon": "fab fa-git-alt" },
+        { "name": "Docker", "icon": "fab fa-docker" },
+        { "name": "AWS", "icon": "fab fa-aws" },
+        { "name": "Linux", "icon": "fas fa-terminal" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with React frontend and Node.js backend, featuring user authentication, payment integration, and admin dashboard.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "icon": "fas fa-shopping-cart",
+      "liveDemo": "#",
+      "github": "#"
+    },
+    {
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
+      "technologies": ["Vue.js", "Socket.io", "Express", "PostgreSQL"],
+      "icon": "fas fa-tasks",
+      "liveDemo": "#",
+      "github": "#"
+    },
+    {
+      "title": "Analytics Dashboard",
+      "description": "A comprehensive analytics dashboard with data visualization, real-time metrics, and customizable reports for business intelligence.",
+      "technologies": ["React", "D3.js", "Python", "FastAPI"],
+      "icon": "fas fa-chart-line",
+      "liveDemo": "#",
+      "github": "#"
+    }
+  ],
+  "social": [
+    { "name": "GitHub", "icon": "fab fa-github", "url": "#" },
+    { "name": "LinkedIn", "icon": "fab fa-linkedin", "url": "#" },
+    { "name": "Twitter", "icon": "fab fa-twitter", "url": "#" },
+    { "name": "Instagram", "icon": "fab fa-instagram", "url": "#" }
+  ],
+  "contact": {
+    "title": "Let's work together!",
+    "description": "I'm always interested in new opportunities and exciting projects. Feel free to reach out!",
+    "formAction": "#"
+  },
+  "footer": {
+    "copyright": "2024 Ali Akbar. All rights reserved."
+  }
+}
