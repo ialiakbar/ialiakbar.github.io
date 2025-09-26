@@ -55,25 +55,28 @@ The website uses `config.json` to store all customizable information. This allow
 - `description2`: Second paragraph of about text
 - `stats`: Array of statistics to display
 
-### 3. Skills Section (`skills`)
+### 3. Experience Section (`experience`)
 
 ```json
 {
-  "skills": [
+  "experience": [
     {
-      "category": "Frontend Development",
-      "items": [
-        { "name": "HTML5", "icon": "fab fa-html5" },
-        { "name": "CSS3", "icon": "fab fa-css3-alt" }
-      ]
+      "period": "2023 - Present",
+      "title": "Senior Software Engineer",
+      "company": "Tech Solutions Inc.",
+      "description": "Leading development of scalable web applications...",
+      "technologies": ["React", "Node.js", "TypeScript", "AWS"]
     }
   ]
 }
 ```
 
 **Fields:**
-- `category`: Skill category name
-- `items`: Array of skills with name and Font Awesome icon
+- `period`: Time period of employment
+- `title`: Job title/position
+- `company`: Company name
+- `description`: Job description and responsibilities
+- `technologies`: Array of technologies used in the role
 
 ### 4. Projects Section (`projects`)
 
@@ -140,14 +143,15 @@ The website uses `config.json` to store all customizable information. This allow
 
 ## 🎨 Customization Examples
 
-### Adding a New Skill
+### Adding a New Experience Entry
 
 ```json
 {
-  "category": "New Category",
-  "items": [
-    { "name": "New Technology", "icon": "fab fa-new-icon" }
-  ]
+  "period": "2024 - Present",
+  "title": "Your Job Title",
+  "company": "Your Company Name",
+  "description": "Describe your role and responsibilities...",
+  "technologies": ["Technology1", "Technology2", "Technology3"]
 }
 ```
 

@@ -40,9 +40,16 @@ function populateWebsite() {
         
         // Update profile image
         if (config.personal.profileImage) {
-            const profileIcon = document.querySelector('.profile-image i');
-            if (profileIcon) {
-                profileIcon.className = config.personal.profileImage;
+            const profileImage = document.querySelector('.profile-image');
+            if (profileImage) {
+                // Check if it's an image file or Font Awesome icon
+                if (config.personal.profileImage.startsWith('images/') || config.personal.profileImage.startsWith('http')) {
+                    // It's an image file
+                    profileImage.innerHTML = `<img src="${config.personal.profileImage}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
+                } else {
+                    // It's a Font Awesome icon
+                    profileImage.innerHTML = `<i class="${config.personal.profileImage}"></i>`;
+                }
             }
         }
     }
@@ -70,29 +77,29 @@ function populateWebsite() {
         }
     }
     
-    // Update skills section
-    if (config.skills) {
-        const skillsContainer = document.querySelector('.skills-grid');
-        if (skillsContainer) {
-            skillsContainer.innerHTML = '';
-            config.skills.forEach(skillCategory => {
-                const categoryElement = document.createElement('div');
-                categoryElement.className = 'skill-category';
+    // Update experience section
+    if (config.experience) {
+        const experienceContainer = document.querySelector('.experience-timeline');
+        if (experienceContainer) {
+            experienceContainer.innerHTML = '';
+            config.experience.forEach((exp, index) => {
+                const experienceElement = document.createElement('div');
+                experienceElement.className = 'experience-item';
                 
-                const itemsHTML = skillCategory.items.map(item => `
-                    <div class="skill-item">
-                        <i class="${item.icon}"></i>
-                        <span>${item.name}</span>
-                    </div>
-                `).join('');
+                const techHTML = exp.technologies.map(tech => `<span>${tech}</span>`).join('');
                 
-                categoryElement.innerHTML = `
-                    <h3>${skillCategory.category}</h3>
-                    <div class="skill-items">
-                        ${itemsHTML}
+                experienceElement.innerHTML = `
+                    <div class="experience-card">
+                        <div class="experience-period">${exp.period}</div>
+                        <h3 class="experience-title">${exp.title}</h3>
+                        <div class="experience-company">${exp.company}</div>
+                        <p class="experience-description">${exp.description}</p>
+                        <div class="experience-tech">
+                            ${techHTML}
+                        </div>
                     </div>
                 `;
-                skillsContainer.appendChild(categoryElement);
+                experienceContainer.appendChild(experienceElement);
             });
         }
     }
@@ -274,7 +281,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-const animateElements = document.querySelectorAll('.skill-category, .project-card, .stat, .contact-item');
+const animateElements = document.querySelectorAll('.experience-card, .project-card, .stat, .contact-item');
 animateElements.forEach(el => {
     observer.observe(el);
 });

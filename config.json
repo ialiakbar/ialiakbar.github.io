@@ -1,59 +1,48 @@
 {
   "personal": {
-    "name": "Aliakbar",
+    "name": "Aliakbar Golestani",
     "title": "Software Engineer",
     "description": "Passionate about creating innovative solutions and building amazing user experiences.",
-    "email": "aliakbar@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "Your City, Country",
-    "profileImage": "fas fa-user"
+    "email": "aliakbar.gls@aut.ac.ir",
+    "phone": "+98 (901) 9564",
+    "location": "Tehran, Country",
+    "profileImage": "images/profile.png"
   },
   "about": {
     "description1": "I'm a passionate software engineer with a love for creating innovative solutions and building amazing user experiences. With expertise in modern web technologies, I enjoy turning complex problems into simple, beautiful, and intuitive solutions.",
     "description2": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
     "stats": [
       {
-        "number": "50+",
-        "label": "Projects Completed"
+        "number": "60+",
+        "label": "Public and Private Projects Completed"
       },
       {
-        "number": "2+",
-        "label": "Years Experience"
-      },
-      {
-        "number": "100%",
-        "label": "Client Satisfaction"
+        "number": "3+",
+        "label": "Years Working Experience"
       }
     ]
   },
-  "skills": [
+  "experience": [
     {
-      "category": "Frontend Development",
-      "items": [
-        { "name": "HTML5", "icon": "fab fa-html5" },
-        { "name": "CSS3", "icon": "fab fa-css3-alt" },
-        { "name": "JavaScript", "icon": "fab fa-js-square" },
-        { "name": "React", "icon": "fab fa-react" },
-        { "name": "Vue.js", "icon": "fab fa-vue" }
-      ]
+      "period": "2023 - Present",
+      "title": "Senior Software Engineer",
+      "company": "Tech Solutions Inc.",
+      "description": "Leading development of scalable web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+      "technologies": ["React", "Node.js", "TypeScript", "AWS", "Docker"]
     },
     {
-      "category": "Backend Development",
-      "items": [
-        { "name": "Node.js", "icon": "fab fa-node-js" },
-        { "name": "Python", "icon": "fab fa-python" },
-        { "name": "MongoDB", "icon": "fas fa-database" },
-        { "name": "Express.js", "icon": "fas fa-server" }
-      ]
+      "period": "2021 - 2023",
+      "title": "Full Stack Developer",
+      "company": "Digital Innovations Ltd.",
+      "description": "Developed and maintained web applications from concept to deployment. Implemented responsive designs and optimized application performance.",
+      "technologies": ["Vue.js", "Python", "PostgreSQL", "Redis", "Git"]
     },
     {
-      "category": "Tools & Others",
-      "items": [
-        { "name": "Git", "icon": "fab fa-git-alt" },
-        { "name": "Docker", "icon": "fab fa-docker" },
-        { "name": "AWS", "icon": "fab fa-aws" },
-        { "name": "Linux", "icon": "fas fa-terminal" }
-      ]
+      "period": "2020 - 2021",
+      "title": "Frontend Developer",
+      "company": "WebCraft Studio",
+      "description": "Created interactive user interfaces and improved user experience across multiple web applications. Collaborated with designers to implement pixel-perfect designs.",
+      "technologies": ["JavaScript", "HTML5", "CSS3", "Sass", "Webpack"]
     }
   ],
   "projects": [

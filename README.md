@@ -15,7 +15,7 @@ A modern, responsive personal portfolio website built with pure HTML, CSS, and J
 
 1. **Hero Section**: Eye-catching introduction with call-to-action buttons
 2. **About Section**: Personal information and statistics
-3. **Skills Section**: Technical skills organized by category
+3. **Experience Section**: Professional work experience with timeline layout
 4. **Projects Section**: Featured projects with descriptions and links
 5. **Contact Section**: Contact information and working contact form
 
@@ -49,6 +49,11 @@ A modern, responsive personal portfolio website built with pure HTML, CSS, and J
 - Modify the about section with your personal story
 - Add your actual contact information
 - Update social media links
+
+### Experience
+- Update the experience entries with your real work history
+- Modify job titles, companies, and descriptions
+- Add the technologies you used in each role
 
 ### Projects
 - Replace the example projects with your actual work
