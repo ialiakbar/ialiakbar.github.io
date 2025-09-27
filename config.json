@@ -4,9 +4,10 @@
     "title": "Software Engineer",
     "description": "Passionate about solving non-trivial challenges, software engineering, and Big Data.",
     "email": "aliakbar.gls@aut.ac.ir",
-    "phone": "+98 (901) 9564",
+    "phone": "+98 (901) 510 95-64",
     "location": "Tehran, Iran",
-    "profileImage": "images/profile.png"
+    "profileImage": "images/profile.png",
+    "cvLink": "cv.pdf"
   },
   "about": {
     "description1": "I am a Software Engineer with over 4 years of experience in the advertising domain, focusing on related algorithms and new product development. I enjoy tackling non-trivial challenges and solving them using software engineering and data-driven approaches.",
@@ -45,30 +46,38 @@
       "technologies": ["Java", "Database", "OAuth", "Gradle", "Android Studio"],
       "icon": "fas fa-shopping-cart",
       "liveDemo": "#",
-      "github": "#"
+      "github": "https://github.com/ialiakbar/android-e-commerce-store-application"
     },
     {
-      "title": "Task Management App",
-      "description": "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
-      "technologies": ["Vue.js", "Socket.io", "Express", "PostgreSQL"],
+      "title": "MyGrep - Rust Grep Clone",
+      "description": "A high-performance grep clone written in Rust as part of an Operating Systems course project. This tool provides fast text searching capabilities with support for regex patterns, multi-threading, and colored output.",
+      "technologies": ["Rust", "Operating Systems", "Multi-Threading", "Regex"],
       "icon": "fas fa-tasks",
       "liveDemo": "#",
-      "github": "#"
+      "github": "https://github.com/ialiakbar/rust-grep-clone"
     },
     {
-      "title": "Analytics Dashboard",
-      "description": "A comprehensive analytics dashboard with data visualization, real-time metrics, and customizable reports for business intelligence.",
-      "technologies": ["React", "D3.js", "Python", "FastAPI"],
-      "icon": "fas fa-chart-line",
+      "title": "java-calculator-gui",
+      "description": "A sophisticated calculator application built in Java with a graphical user interface that supports complex mathematical expressions with proper operator precedence and error handling.",
+      "technologies": ["Java", "GUI", "Swing", "Math"],
+      "icon": "fas fa-tasks",
       "liveDemo": "#",
-      "github": "#"
+      "github": "https://github.com/ialiakbar/java-calculator-gui"
+    },
+    {
+      "title": "dual-headset-sync",
+      "description": "A bash script to sync and combine audio from two separate Bluetooth headsets into a single audio output.",
+      "technologies": ["Bash", "Bluetooth", "Audio"],
+      "icon": "fas fa-tasks",
+      "liveDemo": "#",
+      "github": "https://github.com/ialiakbar/dual-headset-sync"
     }
   ],
   "social": [
-    { "name": "GitHub", "icon": "fab fa-github", "url": "#" },
-    { "name": "LinkedIn", "icon": "fab fa-linkedin", "url": "#" },
-    { "name": "Twitter", "icon": "fab fa-twitter", "url": "#" },
-    { "name": "Instagram", "icon": "fab fa-instagram", "url": "#" }
+    { "name": "GitHub", "icon": "fab fa-github", "url": "https://github.com/ialiakbar" },
+    { "name": "LinkedIn", "icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/aliakbar-golestani-22b986246" },
+    { "name": "Instagram", "icon": "fab fa-instagram", "url": "https://www.instagram.com/aliakbar.gls" },
+    { "name": "Telegram", "icon": "fab fa-telegram", "url": "https://t.me/aliakbar_gls" }
   ],
   "contact": {
     "title": "Let's work together!",
@@ -76,6 +85,6 @@
     "formAction": "#"
   },
   "footer": {
-    "copyright": "2024 Ali Akbar. All rights reserved."
+    "copyright": "2024 Aliakbar Golestani. All rights reserved."
   }
 }

@@ -623,6 +623,25 @@ section {
     transform: translateY(-3px);
 }
 
+.cv-download-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.cv-download-section .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cv-download-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
 .contact-form {
     background: #334155;
     padding: 2rem;

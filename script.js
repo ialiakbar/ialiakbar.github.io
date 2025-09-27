@@ -52,6 +52,51 @@ function populateWebsite() {
                 }
             }
         }
+        
+        // Update CV download links
+        if (config.personal.cvLink) {
+            const cvDownloadLink = document.getElementById('cv-download');
+            const cvDownloadContactLink = document.getElementById('cv-download-contact');
+            
+            // Function to force download using fetch
+            async function forceDownload(url, filename) {
+                try {
+                    const response = await fetch(url);
+                    const blob = await response.blob();
+                    const downloadUrl = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = downloadUrl;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(downloadUrl);
+                } catch (error) {
+                    console.error('Download failed:', error);
+                    // Fallback to direct link
+                    window.open(url, '_blank');
+                }
+            }
+            
+            if (cvDownloadLink) {
+                cvDownloadLink.href = config.personal.cvLink;
+                cvDownloadLink.setAttribute('download', 'Aliakbar_Golestani_CV.pdf');
+                cvDownloadLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    forceDownload(config.personal.cvLink, 'Aliakbar_Golestani_CV.pdf');
+                });
+                console.log('CV Download Link set:', cvDownloadLink.href);
+            }
+            if (cvDownloadContactLink) {
+                cvDownloadContactLink.href = config.personal.cvLink;
+                cvDownloadContactLink.setAttribute('download', 'Aliakbar_Golestani_CV.pdf');
+                cvDownloadContactLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    forceDownload(config.personal.cvLink, 'Aliakbar_Golestani_CV.pdf');
+                });
+                console.log('CV Contact Link set:', cvDownloadContactLink.href);
+            }
+        }
     }
     
     // Update about section
@@ -230,17 +275,22 @@ window.addEventListener('scroll', () => {
 // Smooth scrolling for navigation links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
         const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
         
-        if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+        // Only prevent default for internal navigation links (starting with #)
+        if (targetId && targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
+        // For external links (like CV download), let the default behavior work
     });
 });
 
